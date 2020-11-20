@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Lightspeed-Plugin:jar">
+    <output-path>$USER_HOME$/Desktop/Plugins/Server/plugins</output-path>
+    <root id="archive" name="Lightspeed-Plugin.jar">
+      <element id="module-output" name="Lightspeed-Plugin" />
+      <element id="extracted-dir" path="$USER_HOME$/Desktop/Plugins/Dependencies/spigot-api-1.16.4.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,15 @@
+name: Lightspeed
+version: 0.1
+author: Sprocket
+main: com.sprocket.lightspeed.Lightspeed
+api-version: 1.14
+commands:
+  bomb:
+    description: Explode the one that you hate most :)
+    usage: /<command>
+  sethome:
+    description: Set a home!
+    usage: /<command>
+  home:
+    description: Go to your home!
+    usage: /<command>
