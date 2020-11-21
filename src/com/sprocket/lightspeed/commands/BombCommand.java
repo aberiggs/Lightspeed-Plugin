@@ -25,7 +25,7 @@ public class BombCommand implements CommandExecutor {
                 //TODO: Have a try catch for if the player listed doesn't exist on the server.
                 Player target = Bukkit.getPlayer(args[0]);
                 //TODO: why .class?
-                for (int i =0; i <= 1000; i++ ) {
+                for (int i = 0; i <= 1000; i++ ) {
                     Entity bomb = target.getWorld().spawn(target.getLocation(), TNTPrimed.class);
                     ((TNTPrimed) bomb).setFuseTicks(5);
                 }
