@@ -1,5 +1,6 @@
 package com.sprocket.lightspeed.commands;
 
+import com.sun.org.apache.regexp.internal.CharacterArrayCharacterIterator;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
@@ -66,8 +67,9 @@ public class SetHomeCommand implements CommandExecutor {
                 Location playerLocation = ((Player)sender).getLocation();
                 String worldName = ((Player) sender).getWorld().getName();
                 float[] locationData = getInfoFromLocation(playerLocation);
-                //TODO: make home name an argument, and grab the position and orientation of the player.
+                //TODO: Make a new json for each player
                 writeToHomeList("plugins/Lightspeed/homes.json", args[0], worldName, locationData);
+                sender.sendMessage(ChatColor.GREEN + "Home successfully set!");
             } catch (Exception e) {
                 e.printStackTrace();
             }

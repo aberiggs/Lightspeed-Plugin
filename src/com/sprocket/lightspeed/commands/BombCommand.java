@@ -19,7 +19,6 @@ public class BombCommand implements CommandExecutor {
 
         Player player = (Player) sender;
 
-        //TODO: Why can't I use "==" over equalsIgnoreCase
         if (command.getName().equalsIgnoreCase("bomb")){
             if (args.length >= 1){
                 //TODO: Have a try catch for if the player listed doesn't exist on the server.

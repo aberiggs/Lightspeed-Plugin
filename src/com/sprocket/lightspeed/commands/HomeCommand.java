@@ -22,7 +22,7 @@ public class HomeCommand implements CommandExecutor {
         else if (command.getName().equalsIgnoreCase("home")){
             try {
                 Player player = (Player) sender;
-                player.sendMessage(ChatColor.RED + "Teleporting to your home!");
+                player.sendMessage(ChatColor.GREEN + "Teleporting to your home!");
                 String filename = "plugins/Lightspeed/homes.json";
                 String homeName = args[0];
 
@@ -48,6 +48,10 @@ public class HomeCommand implements CommandExecutor {
 
                 //TODO: Consider moving some of this stuff out of the try-catch if possible?
                 Location homeLocation = new Location(homeWorld, xVal, yVal, zVal, yawVal , pitchVal);
+
+                //Before teleporting the player to their home, set their position in BackCommand.
+                BackCommand.writePreviousPositions(player, player.getLocation());
+
                 player.teleport(homeLocation);
 
             } catch (Exception e) {

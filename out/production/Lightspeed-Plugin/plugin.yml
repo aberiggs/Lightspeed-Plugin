@@ -13,3 +13,14 @@ commands:
   home:
     description: Go to your home!
     usage: /<command>
+  tpa:
+    description: Send a tp request!
+    usage: /<command>
+  tpaccept:
+    description: Accept a tp request!
+    usage: /<command>
+  back:
+    description: Go back to last teleport or death location!
+    usage: /<command>
+
+
